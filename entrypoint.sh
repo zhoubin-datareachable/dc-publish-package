@@ -3,7 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
-
+    echo "${TOKEN}"
     # 检测是否有输入TOKEN
     if usesBoolean "${TOKEN}"; then
         echo "::add-mask::${TOKEN}"
