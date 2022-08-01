@@ -1,0 +1,13 @@
+name: "Publish npm package"
+author: "zb"
+branding:
+  icon: "anchor"
+  color: "blue"
+description: "发布npm包"
+inputs:
+  token:
+    description: "用户token"
+    required: true
+runs:
+  using: "docker"
+  image: "Dockerfile"
