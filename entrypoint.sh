@@ -3,6 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
+    yum -y install git
     git tag
     # 构建
     buildingConfiguration
