@@ -5,6 +5,9 @@ branding:
   color: "blue"
 description: "public package"
 inputs:
+  name:
+    description: "name"
+    required: false
   tag:
     description: "tag"
     required: false

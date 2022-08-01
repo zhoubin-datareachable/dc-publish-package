@@ -3,7 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
-
+    echo "${NAME}"
     # 构建
     buildingConfiguration
 
