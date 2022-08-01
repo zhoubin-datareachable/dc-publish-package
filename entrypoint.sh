@@ -3,7 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
-    git tag
+    pwd
     # 构建
     buildingConfiguration
 
