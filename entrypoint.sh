@@ -3,6 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
+    apt-get install sudo
     sudo apt-get install git
     cd /github/workspace
     # 构建
