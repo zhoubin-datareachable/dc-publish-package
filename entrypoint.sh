@@ -30,7 +30,6 @@ buildingConfiguration() {
     registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
     npmrc="${token}${registry}"
     echo "${npmrc}" >.npmrc
-    echo "aaa" >.npmrc
     echo "end"
     ls
 }
