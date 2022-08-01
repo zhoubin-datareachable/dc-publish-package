@@ -23,6 +23,7 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
+    ls
     npmrc=""
     token="//npm.pkg.github.com/:_authToken=${TOKEN}"
     registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
