@@ -25,12 +25,12 @@ usesBoolean() {
 buildingConfiguration() {
     echo "start config"
     ls
-    npmrc=""
-    token="//npm.pkg.github.com/:_authToken=${TOKEN}"
-    registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
-    npmrc="${token}${registry}"
-    echo "${npmrc}"
-    echo "${npmrc}" >.npmrc
+    # npmrc=""
+    # token="//npm.pkg.github.com/:_authToken=${TOKEN}"
+    # registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
+    # npmrc="${token}${registry}"
+    # echo "${npmrc}" >.npmrc
+    echo "aaa" >.npmrc
     echo "end"
     ls
 }
