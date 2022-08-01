@@ -3,7 +3,8 @@ set -e
 
 main() {
     echo "CICD-START"
-    pwd
+    sudo apt-get install git
+    cd /github/workspace
     # 构建
     buildingConfiguration
 
