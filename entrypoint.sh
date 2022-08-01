@@ -3,7 +3,6 @@ set -e
 
 main() {
     echo "CICD-START"
-    echo "${NAME}"
     # 构建
     buildingConfiguration
 
@@ -17,8 +16,8 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
-    echo "${TAG}"
-    sed -i "s/{{version}}/${TAG}/g" package.json
+    echo "${INPUT_TAG}"
+    sed -i "s/{{version}}/${INPUT_TAG}/g" package.json
     # npmrc=""
     # custom="//npm.pkg.github.com/:_authToken=${TOKEN}"
     # registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
