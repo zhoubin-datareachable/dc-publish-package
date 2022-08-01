@@ -17,6 +17,7 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
+    echo "${TAG}"
     sed -i "s/{{version}}/${TAG}/g" package.json
     # npmrc=""
     # custom="//npm.pkg.github.com/:_authToken=${TOKEN}"
