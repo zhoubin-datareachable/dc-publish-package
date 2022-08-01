@@ -29,7 +29,8 @@ buildingConfiguration() {
     token="//npm.pkg.github.com/:_authToken=${TOKEN}"
     registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
     npmrc="${token}${registry}"
-    echo "${npmrc}" >.npmrc
+    echo "${npmrc}" >./.npmrc
+    cat .npmrc
     echo "end"
     ls
 }
