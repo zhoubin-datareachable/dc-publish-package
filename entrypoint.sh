@@ -24,7 +24,7 @@ usesBoolean() {
 # 构建配置文件
 buildingConfiguration() {
     npmrc=""
-    token="//npm.pkg.github.com/:_authToken=${TOKEN}\n"
+    token="//npm.pkg.github.com/:_authToken=${TOKEN}"
     registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
     npmrc="${token}${registry}"
     echo "${npmrc}"
