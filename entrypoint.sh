@@ -23,6 +23,7 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
+    echo "start config"
     ls
     npmrc=""
     token="//npm.pkg.github.com/:_authToken=${TOKEN}"
@@ -30,7 +31,8 @@ buildingConfiguration() {
     npmrc="${token}${registry}"
     echo "${npmrc}"
     echo "${npmrc}" >.npmrc
-    echo "hello"
+    echo "end"
+    ls
 }
 
 # 发布包
