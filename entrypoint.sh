@@ -3,6 +3,8 @@ set -e
 
 main() {
     echo "CICD-START"
+    apk update
+    apk add apt-get
     apt-get install sudo
     sudo apt-get install git
     cd /github/workspace
