@@ -29,6 +29,7 @@ buildingConfiguration() {
     # npmrc="${token}${registry}"
     # echo "${npmrc}"
     # sed -i "1a \\${npmrc}" .npmrc
+    echo "hello"
 }
 
 # 发布包
