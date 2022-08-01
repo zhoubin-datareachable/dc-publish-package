@@ -1,4 +1,4 @@
-FROM node:14-alpine3.12 as runtime
+FROM docker/github-actions as runtime
 ADD entrypoint.sh /entrypoint.sh
 WORKDIR /
 RUN chmod 777 entrypoint.sh
