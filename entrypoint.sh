@@ -4,6 +4,7 @@ set -e
 main() {
     echo "CICD-START"
     apk add git
+    git tag
     # sudo apt-get install git
     cd /github/workspace
     # 构建
