@@ -3,11 +3,12 @@ author: "zb"
 branding:
   icon: "anchor"
   color: "blue"
-description: "发布npm包"
+description: "public package"
 inputs:
   token:
-    description: "用户token"
+    description: "token"
     required: true
+    default: ${{ github.token }}
 runs:
   using: "docker"
   image: "Dockerfile"
