@@ -27,8 +27,8 @@ buildingConfiguration() {
     ls
     npmrc=""
     token="//npm.pkg.github.com/:_authToken=${TOKEN}"
-    registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
-    npmrc="${token}${registry}"
+    registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com\n"
+    npmrc="${registry}${token}"
     echo "${npmrc}" >./.npmrc
     cat .npmrc
     echo "end"
