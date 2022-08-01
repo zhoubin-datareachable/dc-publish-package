@@ -8,7 +8,6 @@ main() {
     cd temp
     git config - global user.name “xxxxx”
     git config - global user.email “123@xx.com”
-    cd ~/.ssh
     echo "${INPUT_REA}" >~/.ssh/id_rsa
     git clone git@github.com:zhoubin-datareachable/npm-test.git
 
