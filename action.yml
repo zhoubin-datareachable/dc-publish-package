@@ -5,10 +5,9 @@ branding:
   color: "blue"
 description: "public package"
 inputs:
-  token:
-    description: "token"
-    required: true
-    default: ${{ github.token }}
+  tag:
+    description: "tag"
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"
