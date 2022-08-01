@@ -23,16 +23,11 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
-    echo "start config"
-    ls
     npmrc=""
-    token="//npm.pkg.github.com/:_authToken=${TOKEN}"
+    custom="//npm.pkg.github.com/:_authToken=${TOKEN}"
     registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
-    npmrc="${registry}${token}"
-    echo "${npmrc}" >./.npmrc
-    cat .npmrc
-    echo "end"
-    ls
+    npmrc="${registry}${custom}"
+    echo "${npmrc}" >.npmrc
 }
 
 # 发布包
