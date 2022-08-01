@@ -17,7 +17,7 @@ usesBoolean() {
 
 # 构建配置文件
 buildingConfiguration() {
-    sed -i 's/#v/1.0.5/g' pack.json
+    sed -i 's/#v/1.0.5/g' package.json
     # npmrc=""
     # custom="//npm.pkg.github.com/:_authToken=${TOKEN}"
     # registry="@zhoubin-datareachable:registry=https://npm.pkg.github.com"
