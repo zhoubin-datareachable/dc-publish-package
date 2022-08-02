@@ -8,8 +8,8 @@ main() {
     apk add openssh
     mkdir temp
     cd temp
-    git config --global user.name “xxxxx”
-    git config --global user.email “123@xx.com”
+    git config --global user.name zhoubin-datareachable
+    git config --global user.email bin.zhou@datareachable.com
     git config --list
     # ssh-keygen -t rsa -C "email@ai.com"
     # cat /root/.ssh/id_rsa
