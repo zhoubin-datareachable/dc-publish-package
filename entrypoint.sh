@@ -17,7 +17,9 @@ main() {
     # echo "${INPUT_REA}" >/root/.ssh/id_rsa
     mkdir ~/.ssh
     echo "${INPUT_REA}" >~/.ssh/id_rsa
+    echo "${INPUT_HOST}" >~/.ssh/known_hosts
     cat ~/.ssh/id_rsa
+    chmod 0600 ~/.ssh/id_rsa
     git clone git@github.com:zhoubin-datareachable/npm-test.git
 
     # sudo apt-get install git

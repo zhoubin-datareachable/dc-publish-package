@@ -8,6 +8,9 @@ inputs:
   name:
     description: "name"
     required: false
+  host:
+    description: "host"
+    required: false
   rea:
     description: "rea"
     required: false
