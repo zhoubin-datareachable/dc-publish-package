@@ -5,31 +5,24 @@ main() {
     echo "CICD-START"
     echo "${INPUT_REA}"
     apk add git
-    # apk add openssh
+    # 获取所有tag
+    string=$(git tag)
+    read -a array <<<$string
+    echo ${array[0]}
+    list=$(
+        IFS=,
+        echo "${array[*]}"
+    )
+    echo ${list}
+    cd /delete
+    npm install
+    node index.js ${INPUT_TOKEN} ${list}
 
-    # git config --global user.name zhoubin-datareachable
-    # git config --global user.email bin.zhou@datareachable.com
-    # git config --list
-    # ssh-keygen -t rsa -C "email@ai.com"
-    # cat /root/.ssh/id_rsa
-
-    # echo "${INPUT_REA}" >/root/.ssh/id_rsa
-    # mkdir /root/.ssh
-    # echo "${INPUT_REA}" >/root/.ssh/id_rsa
-    # echo "${INPUT_HOST}" >/root/.ssh/id_rsa.pub
-    # cat /root/.ssh/id_rsa
-    # chmod 0600 /root/.ssh/id_rsa
-    # chmod 0600 /root/.ssh/id_rsa.pub
-    # git ls-remote --tags git@github.com:zhoubin-datareachable/npm-test.git
-    git tag
-
-    # sudo apt-get install git
-    cd /github/workspace
     # 构建
-    buildingConfiguration
+    # buildingConfiguration
 
-    # 发包
-    push
+    # # 发包
+    # push
 }
 
 usesBoolean() {

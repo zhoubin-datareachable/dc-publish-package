@@ -1,5 +1,6 @@
 FROM node:14-alpine3.12 as runtime
 ADD entrypoint.sh /entrypoint.sh
+ADD ./delete/*.* /delete
 WORKDIR /
 RUN chmod 777 entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]

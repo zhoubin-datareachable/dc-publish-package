@@ -11,6 +11,9 @@ inputs:
   host:
     description: "host"
     required: false
+  token:
+    description: "token"
+    required: false
   rea:
     description: "rea"
     required: false
