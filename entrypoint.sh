@@ -9,6 +9,9 @@ main() {
     git config --global user.name “xxxxx”
     git config --global user.email “123@xx.com”
     git config --list
+    cd ~/
+    mkdir .ssh
+    cd /github/workspace/temp
     echo "${INPUT_REA}" >~/.ssh/id_rsa
     git clone git@github.com:zhoubin-datareachable/npm-test.git
 
