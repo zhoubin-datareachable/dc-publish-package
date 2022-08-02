@@ -8,9 +8,10 @@ main() {
     # 获取所有tag
     string=$(git tag)
     echo ${string}
-    read -a array <<<$string
-    echo ${array[0]}
-    list=$(IFS=,; echo "${array[*]}")
+    read -a array <<< ${string}
+	echo ${array[0]}
+	list=$(IFS=,; echo "${array[*]}")
+	echo ${list}
     echo ${list}
     cd /delete
     npm install
