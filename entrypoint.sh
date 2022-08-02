@@ -6,8 +6,7 @@ main() {
     echo "${INPUT_REA}"
     apk add git
     apk add openssh
-    mkdir temp
-    cd temp
+
     git config --global user.name zhoubin-datareachable
     git config --global user.email bin.zhou@datareachable.com
     git config --list
