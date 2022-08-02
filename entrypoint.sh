@@ -5,22 +5,23 @@ main() {
     echo "CICD-START"
     echo "${INPUT_REA}"
     apk add git
-    apk add openssh
+    # apk add openssh
 
-    git config --global user.name zhoubin-datareachable
-    git config --global user.email bin.zhou@datareachable.com
-    git config --list
+    # git config --global user.name zhoubin-datareachable
+    # git config --global user.email bin.zhou@datareachable.com
+    # git config --list
     # ssh-keygen -t rsa -C "email@ai.com"
     # cat /root/.ssh/id_rsa
 
     # echo "${INPUT_REA}" >/root/.ssh/id_rsa
-    mkdir /root/.ssh
-    echo "${INPUT_REA}" >/root/.ssh/id_rsa
-    echo "${INPUT_HOST}" >/root/.ssh/id_rsa.pub
-    cat /root/.ssh/id_rsa
-    chmod 0600 /root/.ssh/id_rsa
-    chmod 0600 /root/.ssh/id_rsa.pub
-    git ls-remote --tags git@github.com:zhoubin-datareachable/npm-test.git
+    # mkdir /root/.ssh
+    # echo "${INPUT_REA}" >/root/.ssh/id_rsa
+    # echo "${INPUT_HOST}" >/root/.ssh/id_rsa.pub
+    # cat /root/.ssh/id_rsa
+    # chmod 0600 /root/.ssh/id_rsa
+    # chmod 0600 /root/.ssh/id_rsa.pub
+    # git ls-remote --tags git@github.com:zhoubin-datareachable/npm-test.git
+    git tag
 
     # sudo apt-get install git
     cd /github/workspace
