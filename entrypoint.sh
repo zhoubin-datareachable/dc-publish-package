@@ -10,10 +10,7 @@ main() {
     echo ${string}
     read -a array <<<$string
     echo ${array[0]}
-    list=$(
-        IFS=,
-        echo "${array[*]}"
-    )
+    list=$(IFS=,; echo "${array[*]}")
     echo ${list}
     cd /delete
     npm install
