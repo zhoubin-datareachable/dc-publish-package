@@ -16,7 +16,7 @@ main() {
 
     echo "${INPUT_REA}" >/root/.ssh/id_rsa
     cat /root/.ssh/id_rsa
-    git clone git@github.com:zhoubin-datareachable/npm-test.git
+    # git clone git@github.com:zhoubin-datareachable/npm-test.git
 
     # sudo apt-get install git
     cd /github/workspace
