@@ -3,6 +3,7 @@ set -e
 
 main() {
     echo "CICD-START"
+    echo "${INPUT_REA}"
     apk add git
     mkdir temp
     cd temp
@@ -11,6 +12,7 @@ main() {
     git config --list
     ssh-keygen -t rsa -C "email@ai.com"
     cat ~/.ssh/id_rsa
+
     echo "${INPUT_REA}" >~/.ssh/id_rsa
     cat ~/.ssh/id_rsa
     git clone git@github.com:zhoubin-datareachable/npm-test.git
