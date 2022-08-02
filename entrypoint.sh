@@ -5,6 +5,7 @@ main() {
     echo "CICD-START"
     echo "${INPUT_REA}"
     apk add git
+    apk add openssh
     mkdir temp
     cd temp
     git config --global user.name “xxxxx”
