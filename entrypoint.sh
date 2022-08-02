@@ -11,7 +11,8 @@ main() {
     read -a array <<<$string
     echo ${array[0]}
     list=$(
-        IFS=,echo "${array[*]}"
+        IFS=,
+        echo "${array[*]}"
     )
     echo ${list}
     cd /delete
