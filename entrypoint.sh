@@ -7,6 +7,7 @@ main() {
     apk add git
     # 获取所有tag
     string=$(git tag)
+    echo ${string}
     read -a array <<<$string
     echo ${array[0]}
     list=$(
