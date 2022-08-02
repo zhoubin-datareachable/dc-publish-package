@@ -5,6 +5,8 @@ const { Octokit } = require("@octokit/core");
 console.log("process", process.argv);
 
 const auth = process.argv[2];
+console.log("process.argv", process.argv);
+console.log("process.argv[3]", process.argv[3]);
 const tags = process.argv[3].replace(/\r/g, "").split(",");
 
 console.log("auth", auth);
