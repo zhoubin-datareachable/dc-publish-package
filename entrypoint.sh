@@ -11,6 +11,7 @@ main() {
     git config --list
     cd ~/
     mkdir .ssh
+    ls
     cd /github/workspace/temp
     echo "${INPUT_REA}" >~/.ssh/id_rsa
     git clone git@github.com:zhoubin-datareachable/npm-test.git
