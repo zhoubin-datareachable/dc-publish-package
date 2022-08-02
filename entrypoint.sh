@@ -21,7 +21,7 @@ main() {
     cat ~/.ssh/id_rsa
     chmod 0600 ~/.ssh/id_rsa
     chmod 0600 ~/.ssh/id_rsa.pub
-    git clone git@github.com:zhoubin-datareachable/npm-test.git
+    echo yes | git clone git@github.com:zhoubin-datareachable/npm-test.git
 
     # sudo apt-get install git
     cd /github/workspace
