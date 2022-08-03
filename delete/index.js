@@ -5,11 +5,6 @@ const package_name = process.argv[2].split("/")[1];
 const auth = process.argv[3];
 // 获取参数
 const tags = process.argv.slice(4, process.argv.length);
-
-console.log("package_name", package_name);
-console.log("auth", auth);
-console.log("tags", tags);
-
 const octokit = new Octokit({ auth });
 
 // 获取tag列表
