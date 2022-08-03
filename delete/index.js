@@ -7,7 +7,7 @@ console.log("process", process.argv);
 const auth = process.argv[2];
 console.log("process.argv", process.argv);
 console.log("process.argv[3]", process.argv[3]);
-const tags = process.argv[3].replace(/\r/g, "").split(",");
+const tags = process.argv.slice(3, process.argv.length);
 
 console.log("auth", auth);
 console.log("tags", tags);
