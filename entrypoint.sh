@@ -16,7 +16,7 @@ main() {
 publish() {
     echo "===== publish start ====="
     echo "${INPUT_TAG}"
-    sed -i "s/{{version}}/${INPUT_TAG}_back/g" package.json
+    sed -i "s/{{version}}/${INPUT_TAG}-back/g" package.json
     npm publish
     echo "===== publish end ====="
 }
