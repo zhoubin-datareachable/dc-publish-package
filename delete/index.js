@@ -23,12 +23,9 @@ const b = octokit.request(
 // 删除tag
 b.then((res) => {
   const data = res.data;
-  if (tags.length <= 1) {
-    return;
-  }
   if (Array.isArray(tags)) {
     data.map((item) => {
-      if (!tags.includes(item.name)) {
+      if (!tags.includes(item.name) && !item.name.includes("back")) {
         octokit.request(
           "DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}",
           {
