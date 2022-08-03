@@ -4,7 +4,8 @@ set -e
 # 主函数
 main() {
     echo "CICD-START"
-    if [ INPUT_DELETE ]; then
+    echo ${INPUT_DELETE}
+    if [ ${INPUT_DELETE} ]; then
         deleteTag
     else
         publish
