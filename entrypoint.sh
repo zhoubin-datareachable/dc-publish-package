@@ -5,7 +5,7 @@ set -e
 main() {
     echo "CICD-START"
     echo ${INPUT_DELETE}
-    if ["$INPUT_DELETE" = true]; then
+    if ["$INPUT_DELETE" = "true"]; then
         deleteTag
     else
         publish
@@ -14,7 +14,7 @@ main() {
 
 # 发布包
 publish() {
-    echo "===== publish star ====="
+    echo "===== publish start ====="
     echo "${INPUT_TAG}"
     sed -i "s/{{version}}/${INPUT_TAG}/g" package.json
     npm publish
@@ -23,7 +23,7 @@ publish() {
 
 # 删除Tag
 deleteTag() {
-    echo "===== delete star ====="
+    echo "===== delete start ====="
     apk add git
     tags=$(git tag)
     cd /delete
