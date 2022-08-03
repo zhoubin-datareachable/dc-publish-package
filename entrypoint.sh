@@ -16,7 +16,13 @@ main() {
 publish() {
     echo "===== publish start ====="
     echo "${INPUT_TAG}"
+    a=$(cat package.json)
+    # 发布备份
     sed -i "s/{{version}}/${INPUT_TAG}-back/g" package.json
+    npm publish
+    echo $a >package.json
+    # 发布当前
+    sed -i "s/{{version}}/${INPUT_TAG}/g" package.json
     npm publish
     echo "===== publish end ====="
 }
