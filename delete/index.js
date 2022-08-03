@@ -1,7 +1,6 @@
 const { Octokit } = require("@octokit/core");
 // 获取仓库名称
 const package_name = process.argv[2].split("/")[1];
-console.log("package_name", package_name);
 // 获取token
 const auth = process.argv[3];
 // 获取参数

@@ -1,4 +1,4 @@
-name: "Publish npm package"
+name: "Publish npm package Or Delete Tag"
 author: "zb"
 branding:
   icon: "anchor"
@@ -8,21 +8,15 @@ inputs:
   repository:
     description: "仓库名称"
     default: ${{ github.repository }}
-  name:
-    description: "name"
-    required: false
-  host:
-    description: "host"
-    required: false
   token:
-    description: "token"
-    required: false
-  rea:
-    description: "rea"
+    description: "用户授权token"
     required: false
   tag:
-    description: "tag"
+    description: "标签"
     required: false
+  delete:
+    description: "是否是删除"
+    default: false
 runs:
   using: "docker"
   image: "Dockerfile"
