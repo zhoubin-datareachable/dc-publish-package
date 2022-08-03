@@ -7,6 +7,10 @@ const auth = process.argv[3];
 const tags = process.argv.slice(4, process.argv.length);
 const octokit = new Octokit({ auth });
 
+if (auth.length !== 40) {
+  return;
+}
+
 // 获取tag列表
 const b = octokit.request(
   "GET /user/packages/{package_type}/{package_name}/versions",
