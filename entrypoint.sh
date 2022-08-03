@@ -8,10 +8,12 @@ main() {
     # 获取所有tag
     string=$(git tag)
     echo ${string}
-    read -a array <<< ${string}
-	echo ${array[0]}
-	list=$(IFS=,; echo "${array[*]}")
-	echo ${list}
+    read -a array <<<${string}
+    list=""
+    for loop in ${array[*]}; do
+        list="${list}${loop},"
+    done
+    list=${list:0:$(expr ${#list[0]} - 1)}
     echo ${list}
     cd /delete
     npm install
@@ -22,6 +24,7 @@ main() {
 
     # # 发包
     # push
+
 }
 
 usesBoolean() {
