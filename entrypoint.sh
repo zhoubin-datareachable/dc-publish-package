@@ -18,7 +18,8 @@ publish() {
     echo "${INPUT_TAG}"
     a=$(cat package.json)
     # 发布备份
-    sed -i "s/{{version}}/${INPUT_TAG}-back/g" package.json
+    d=$(date '+%s')
+    sed -i "s/{{version}}/${INPUT_TAG}-back-${d}/g" package.json
     npm publish
     echo $a >package.json
     # 发布当前
