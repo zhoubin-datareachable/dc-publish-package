@@ -9,15 +9,15 @@ main() {
     string=$(git tag)
     echo ${string}
     read -a array <<<${string}
-    list=""
-    for loop in ${array[*]}; do
-        list="${list}${loop},"
-    done
-    list=${list:0:$(expr ${#list[0]} - 1)}
-    echo ${list}
+    # list=""
+    # for loop in ${array[*]}; do
+    #     list="${list}${loop},"
+    # done
+    # list=${list:0:$(expr ${#list[0]} - 1)}
+    # echo ${list}
     cd /delete
     npm install
-    node index.js ${INPUT_TOKEN} ${list}
+    node index.js ${INPUT_TOKEN} ${array}
 
     # 构建
     # buildingConfiguration
