@@ -19,7 +19,7 @@ const b = octokit.request(
 // 删除tag
 b.then((res) => {
   const data = res.data;
-  if (tags.length === 1) {
+  if (tags.length <= 1) {
     return;
   }
   if (Array.isArray(tags)) {
