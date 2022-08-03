@@ -10,7 +10,7 @@ inputs:
     default: ${{ github.repository }}
   token:
     description: "用户授权token"
-    required: false
+    required: "false"
   tag:
     description: "标签"
     required: false

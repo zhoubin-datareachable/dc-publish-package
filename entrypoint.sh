@@ -5,7 +5,7 @@ set -e
 main() {
     echo "CICD-START"
     echo ${INPUT_DELETE}
-    if ["$INPUT_DELETE" = "true"]; then
+    if [ $INPUT_DELETE = "true" ]; then
         deleteTag
     else
         publish
