@@ -5,6 +5,9 @@ branding:
   color: "blue"
 description: "public package"
 inputs:
+  repository:
+    description: "仓库名称"
+    default: ${{ github.repository }}
   name:
     description: "name"
     required: false

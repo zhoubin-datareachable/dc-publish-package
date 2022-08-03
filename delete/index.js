@@ -1,39 +1,38 @@
-// Octokit.js
-// https://github.com/octokit/core.js#readme
 const { Octokit } = require("@octokit/core");
-
-console.log("process", process.argv);
-
-const auth = process.argv[2];
-console.log("process.argv", process.argv);
-console.log("process.argv[3]", process.argv[3]);
-const tags = process.argv.slice(3, process.argv.length);
-
-console.log("auth", auth);
-console.log("tags", tags);
+// 获取仓库名称
+const package_name = process.argv[2].split("/")[1];
+console.log("package_name", package_name);
+// 获取token
+const auth = process.argv[3];
+// 获取参数
+const tags = process.argv.slice(4, process.argv.length);
 
 const octokit = new Octokit({ auth });
 
+// 获取tag列表
 const b = octokit.request(
   "GET /user/packages/{package_type}/{package_name}/versions",
   {
     package_type: "npm",
-    package_name: "npm-test",
+    package_name,
   }
 );
 
+// 删除tag
 b.then((res) => {
   const data = res.data;
-  data.map((item) => {
-    if (!tags.includes(item.name)) {
-      octokit.request(
-        "DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}",
-        {
-          package_type: "npm",
-          package_name: "npm-test",
-          package_version_id: item.id,
-        }
-      );
-    }
-  });
+  if (Array.isArray(tags)) {
+    data.map((item) => {
+      if (!tags.includes(item.name)) {
+        octokit.request(
+          "DELETE /user/packages/{package_type}/{package_name}/versions/{package_version_id}",
+          {
+            package_type: "npm",
+            package_name,
+            package_version_id: item.id,
+          }
+        );
+      }
+    });
+  }
 });

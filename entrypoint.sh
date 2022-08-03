@@ -17,8 +17,7 @@ main() {
     # echo ${list}
     cd /delete
     npm install
-    node index.js ${INPUT_TOKEN} ${string}
-
+    node index.js ${INPUT_REPOSITORY} ${INPUT_TOKEN} ${string}
     # 构建
     # buildingConfiguration
 
