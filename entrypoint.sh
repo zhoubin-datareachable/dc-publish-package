@@ -8,16 +8,16 @@ main() {
     # 获取所有tag
     string=$(git tag)
     echo ${string}
-    read -a array <<<${string}
-    list=""
-	for loop in ${array[*]}; do
-		list="${list}${loop},"
-	done
-	list=${list:0:$(expr ${#list[0]} - 1)}
-	echo ${list}
+    # read -a array <<<${string}
+    # list=""
+    # for loop in ${array[*]}; do
+    # 	list="${list}${loop},"
+    # done
+    # list=${list:0:$(expr ${#list[0]} - 1)}
+    # echo ${list}
     cd /delete
     npm install
-    node index.js ${INPUT_TOKEN} ${list}
+    node index.js ${INPUT_TOKEN} ${string}
 
     # 构建
     # buildingConfiguration
